@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-
 import firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from './firebaseConfig';
+import firebaseConfig from '../Login/firebaseConfig'
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
 import google from '../../images/google.png'
@@ -59,7 +58,7 @@ const style={
                 </div> 
     </div>
     <div className='text-center'>
-    <span className='text-dark'>Dont Have Account ? </span>
+    <span className='text-dark'>Don't Have Account ? </span>
     <span className="text-danger">Create a new account</span>
     </div>
     

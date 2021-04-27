@@ -3,23 +3,23 @@ import { useForm } from 'react-hook-form';
 import Dashboard from '../Dashboard/Dashboard';
 
 const AddReviews = () => {
-    const [review , setReview]= useState({})
-        const { register,handleSubmit, watch, formState: { errors } } = useForm();
-       
-     
-        const onSubmit = review =>{
-      
-        console.log(review);
-
-            fetch('https://agile-shelf-87787.herokuapp.com/dashboard/addreviews' ,{
+        const [review, setReview] = useState({})
+        const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    
+    
+        const onSubmit = review => {
+                alert('Thank You! Your review added successfully')
+            console.log(review);
+    
+            fetch('https://agile-shelf-87787.herokuapp.com/dashboard/addreviews', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(review),
-               
+    
             })
-            .then(res=> console.log("hello", res))
-           
-      
+                .then(res => console.log("hello", res))
+    
+    
         }
 
         const cardStyle = {

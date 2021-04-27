@@ -12,8 +12,8 @@ const AddAdmin = () => {
 
         fetch('https://agile-shelf-87787.herokuapp.com/dashboard/addAdmin', {
             method: 'POST',
-           headers: {'Content-Type':'Application/json'},
-            body:JSON.stringify(data)
+            headers: { 'Content-Type': 'Application/json' },
+            body: JSON.stringify(data)
         })
             .then(response => response.json())
             .then(data => {
@@ -24,20 +24,20 @@ const AddAdmin = () => {
             })
     }
     return (
-        
-              <section  className="container-fluid row">
-            <Dashboard/>
+
+        <section className="container-fluid row">
+            <Dashboard />
             <div className="col-md-8 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
                 <h5 className="text-brand">Add Admin</h5>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div class="col-md-6">
-                                                    <div class="form-group"> <label for="form_company">Enter Your Email*</label> <input id="form_company" {...register("email")} type="text"  class="form-control"  required="required" /> </div>
-                                                </div>
+                        <div class="form-group"> <label for="form_company">Enter Your Email*</label> <input id="form_company" {...register("email")} type="text" class="form-control" required="required" /> </div>
+                    </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         </section>
-    
+
     );
 };
 
